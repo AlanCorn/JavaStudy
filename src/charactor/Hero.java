@@ -1,4 +1,6 @@
 package charactor;
+import property.Item;
+
 public class Hero{
 
     String name;        //名称
@@ -12,8 +14,15 @@ public class Hero{
     int assit;          //助攻数
     int lastHit;        //补刀数
     static String copyright="Riot Games";
+    //构造函数
+    
     public Hero(){
-
+        System.out.println("Hero的无参的构造方法 ");
+    }
+     
+    public Hero(String name){
+        System.out.println("Hero的有一个参数的构造方法 ");
+        this.name = name;
     }
     public Hero(String name, float hp){
 
@@ -21,8 +30,14 @@ public class Hero{
     public Hero(String name, float hp, float armor,int moveSpeed){
         this(name,hp);
     }
+    
+    public void useItem(Item i){
+        System.out.println("hero use item");
+        i.effect();
+    }
     public static void main(String[] args){
-        Hero garen = new Hero();
+        new Hero();
+/*         Hero garen = new Hero();
         garen.name ="盖伦";
         garen.hp = 616.28f;
         garen.armor = 27.536f;
@@ -34,7 +49,7 @@ public class Hero{
         teemo.name ="提莫";
         teemo.hp = 383f;
         teemo.armor = 14f;
-        teemo.moveSpeed = 330;
+        teemo.moveSpeed = 330; */
     }
     public static void keng(){
         System.out.println("坑队友");
