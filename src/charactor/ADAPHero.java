@@ -13,5 +13,13 @@ public class ADAPHero extends Hero implements AP,AD{
         // TODO Auto-generated method stub
         System.out.println("进行魔法攻击");
     }
-        
+
+    @Override
+    public void attack() {
+        AP.super.attack();
+    }
+    public static void main(String[] args) {
+        ADAPHero adaphero = new ADAPHero();
+        adaphero.attack();
+    }
 }
